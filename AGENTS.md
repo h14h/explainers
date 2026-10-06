@@ -1,9 +1,11 @@
 # AGENTS.md
 
-This project is for creating and organizing explainer videos.
+This repository contains the bootstrapping and skills for creating explainer videos. Generated videos and their sources are local outputs, not repository content.
 
 ## Promo videos output
 
 Final video output should be a generated MP4. The filename should be short, but convey the relevant subject.
 
-Generated .mp4 files should be placed in the root of this project. The source project & relevant files used to generate the video should be included in a directory that matches said video's filename.
+Place generated MP4 files in `videos/`. Put each video's source project and relevant working files in `videos/<filename-without-extension>/`. Keep all generated assets and temporary files under `videos/`, which is gitignored.
+
+Keep skills and the `.claude/skills/` symlinks in git. Never commit API keys or `.env`.
