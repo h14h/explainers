@@ -2,7 +2,7 @@
 
 A small bootstrap for making explainer videos with an AI coding agent. It provides a skill and style guidance; your agent designs and builds the rendering pipeline for your system and each video's needs.
 
-_Videos are created by screen recording a generated JavaScript project, **NOT** with GenAI._
+_The animation is rendered from a generated JavaScript project, rather than produced by a generative video model._
 
 ## Usage
 
@@ -14,7 +14,7 @@ _Videos are created by screen recording a generated JavaScript project, **NOT** 
    ```dotenv
    OPENROUTER_API_KEY=your-key-here
    ```
-3. Open Claude Code (Opus 5.5. is particularly good at these) or an agent that supports `.agents/skills/`. Allow it to use tools and the internet.
+3. Open Claude Code (Opus 5.5 is particularly good at these) or an agent that supports `.agents/skills/`. Allow it to use tools and the internet.
 4. Ask (for example):
    > Use the promo skill to make a whiteboard explainer video about how heat pumps work.
 
@@ -30,12 +30,12 @@ In my experience doing this with Opus 5.5 and zero guidance on which audio model
 
 It _is_ possible to use local models in lieu of OpenRouter if you have the hardware; you'll just have to work with your agent to set up a pipeline that works for you.
 
-In my testing I was able to get perfectly usable results on an RX 7900 XTX. I've found that Breeze tends to be the best TTS model w/ downloadable weights (Breeze licencing disallows commercial though, so if your intent is to start an AI YouTube career _you have been warned_).
+In my testing, I was able to get perfectly usable results on an RX 7900 XTX. I've found that Breeze tends to be the best TTS model with downloadable weights (Breeze’s license disallows commercial use, though, so if your intent is to start an AI YouTube career _you have been warned_).
 
 ## Future Plans
 
 I don't have any explicit plans for the future, but I do have some thoughts on how I might tune or refine the core skill (or add others) as I use this.
 
-How to tune the TTS pacing or annunciation is a refinement target, and a new skill to help with creating new styles is something I may try to add.
+I’d like to refine TTS pacing and enunciation, and I may add a skill for creating new visual styles.
 
 Licensed under [MIT](LICENSE). Have fun!
