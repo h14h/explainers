@@ -1,6 +1,10 @@
-# Explainer videos
+# Explainer Vids
 
 A small bootstrap for making explainer videos with an AI coding agent. It provides a skill and style guidance; your agent designs and builds the rendering pipeline for your system and each video's needs.
+
+_Videos are created by screen recording a generated JavaScript project, **NOT** with GenAI._
+
+## Usage
 
 1. Clone this repo and open its folder.
 2. Copy the example, then add your [OpenRouter](https://openrouter.ai/) key to `.env`:
@@ -10,8 +14,8 @@ A small bootstrap for making explainer videos with an AI coding agent. It provid
    ```dotenv
    OPENROUTER_API_KEY=your-key-here
    ```
-3. Open Claude Code or an agent that supports `.agents/skills/`. Allow it to use tools and the internet.
-4. Ask:
+3. Open Claude Code (Opus 5.5. is particularly good at these) or an agent that supports `.agents/skills/`. Allow it to use tools and the internet.
+4. Ask (for example):
    > Use the promo skill to make a whiteboard explainer video about how heat pumps work.
 
 Use `whiteboard`, `collage` (whimsical hand-drawn collage), or describe your own style. Optionally specify an audience or duration.
@@ -20,4 +24,18 @@ The agent creates the script, narration, animation, and finished MP4. It may nee
 
 Find the video and its source files in `videos/`. Outputs and your API key are gitignored; this repo tracks only the setup and skills.
 
-Licensed under [MIT](LICENSE).
+## Cost & Usage
+
+In my experience doing this with Opus 5.5 and zero guidance on which audio models to pick, OpenRouter token costs typically come out to between $0.50 and $1.50 per video.
+
+It _is_ possible to use local models in lieu of OpenRouter if you have the hardware; you'll just have to work with your agent to set up a pipeline that works for you.
+
+In my testing I was able to get perfectly usable results on an RX 7900 XTX. I've found that Breeze tends to be the best TTS model w/ downloadable weights (Breeze licencing disallows commercial though, so if your intent is to start an AI YouTube career _you have been warned_).
+
+## Future Plans
+
+I don't have any explicit plans for the future, but I do have some thoughts on how I might tune or refine the core skill (or add others) as I use this.
+
+How to tune the TTS pacing or annunciation is a refinement target, and a new skill to help with creating new styles is something I may try to add.
+
+Licensed under [MIT](LICENSE). Have fun!
