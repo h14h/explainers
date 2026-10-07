@@ -6,6 +6,24 @@ _The animation is rendered from a generated JavaScript project, rather than prod
 
 ## Usage
 
+### Install the skill with Vercel Skills
+
+Run this in the project where you want to create videos (requires Node.js and npm):
+
+```bash
+npx skills add h14h/explainers --skill promo
+```
+
+Choose your coding agent when prompted. Add `--global` to make the skill available across projects. The installer includes both bundled style references; you do not need to clone this repository.
+
+Set `OPENROUTER_API_KEY` in your environment or your project's `.env` file, then ask your agent:
+
+> Use the promo skill to make a whiteboard explainer video about how heat pumps work.
+
+The skill puts the finished MP4 and its source files under your project's `videos/` directory. Your agent can also help configure local TTS instead of OpenRouter.
+
+### Use this repository directly
+
 1. Clone this repo and open its folder.
 2. Copy the example, then add your [OpenRouter](https://openrouter.ai/) key to `.env`:
    ```bash
